@@ -4,9 +4,9 @@ module.exports = {
     script: 'npm',
     args: 'run dev',
     env: {
-      NODE_ENV: 'production',
+      NODE_ENV: 'production'
     },
-    instances: 1,
+    instances: '1',
     autorestart: true,
     watch: false,
     max_memory_restart: '1G',
