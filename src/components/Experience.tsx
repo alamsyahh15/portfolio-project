@@ -1,5 +1,4 @@
-import React from 'react';
-import { Calendar, MapPin, Award, TrendingUp } from 'lucide-react';
+import { Award, Calendar, MapPin, TrendingUp } from 'lucide-react';
 import { PersonalData } from '../types';
 
 interface ExperienceProps {
@@ -91,7 +90,7 @@ export default function Experience({ personalData }: ExperienceProps) {
             
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
                 <div className="text-gray-600 dark:text-gray-400 font-medium">Years Experience</div>
               </div>
               <div className="text-center">

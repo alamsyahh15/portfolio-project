@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Download, Menu, X, Sun, Moon, Settings } from 'lucide-react';
-import Hero from './components/Hero';
+import { Download, Menu, Moon, Sun, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import About from './components/About';
+import AdminPanel from './components/AdminPanel';
+import Contact from './components/Contact';
+import Experience from './components/Experience';
+import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import AdminPanel from './components/AdminPanel';
-import { ProjectData, PersonalData } from './types';
+import { PersonalData, ProjectData } from './types';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,21 +57,23 @@ function App() {
   ]);
 
   const [personalData, setPersonalData] = useState<PersonalData>({
-    name: "Alexandra Chen",
-    title: "Senior Full Stack Engineer",
+    name: "Alamsyah",
+    title: "Full Stack Engineer",
     subtitle: "Building scalable solutions for tomorrow's challenges",
-    bio: "Experienced software engineer with 8+ years of expertise in developing enterprise-grade applications. Specialized in modern web technologies, cloud architecture, and leading cross-functional teams to deliver high-impact solutions that drive business growth.",
-    email: "alexandra.chen@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    linkedin: "https://linkedin.com/in/alexandra-chen",
-    github: "https://github.com/alexandra-chen",
-    website: "https://alexandra-chen.dev",
+    bio: "Experienced software engineer with 5+ years of expertise in developing enterprise-grade applications. Specialized in modern web technologies, cloud architecture, and leading cross-functional teams to deliver high-impact solutions that drive business growth.",
+    email: "muhamad.a.syah31@gmail.com",
+    phone: "+62 (838) 2396-0174",
+    location: "Jakarta, ID",
+    linkedin: "https://www.linkedin.com/in/alamsyah15",
+    github: "https://github.com/alamsyahh15",
+    website: "https://alamsyah15.my.id",
     skills: [
       { name: "JavaScript/TypeScript", level: 95 },
       { name: "React/Next.js", level: 92 },
       { name: "Node.js/Express", level: 90 },
-      { name: "Python/Django", level: 88 },
+      { name: "Laravel", level: 90 },
+      { name: "Flutter", level: 95 },
+      { name: "Golang", level: 88 },
       { name: "AWS/Cloud Architecture", level: 85 },
       { name: "PostgreSQL/MongoDB", level: 87 },
       { name: "Docker/Kubernetes", level: 82 },
@@ -79,8 +81,8 @@ function App() {
     ],
     experience: [
       {
-        company: "TechCorp Solutions",
-        position: "Senior Full Stack Engineer",
+        company: "Studio Alva",
+        position: "Software Engineer",
         duration: "2022 - Present",
         description: "Lead development of microservices architecture serving 1M+ users. Architected and implemented scalable solutions using React, Node.js, and AWS, resulting in 40% performance improvement and $2M cost savings.",
         achievements: [
@@ -90,10 +92,10 @@ function App() {
         ]
       },
       {
-        company: "InnovateLabs Inc.",
-        position: "Full Stack Developer",
-        duration: "2020 - 2022",
-        description: "Developed and maintained multiple client-facing applications using modern web technologies. Collaborated with product and design teams to deliver user-centric solutions.",
+        company: "Ritter Coding",
+        position: "Project Manager | Partnership",
+        duration: "2020 - Preset",
+        description: "Collaborated with clients to understand their business requirements and translate them into technical solutions. Managed project timelines, budgets, and delivered high-quality software products on time and within budget.",
         achievements: [
           "Built 5+ production applications from concept to deployment",
           "Improved code quality through implementation of testing strategies",
@@ -101,29 +103,30 @@ function App() {
         ]
       },
       {
-        company: "StartupXYZ",
-        position: "Frontend Developer",
-        duration: "2018 - 2020",
-        description: "Specialized in creating responsive, accessible web applications with focus on user experience and performance optimization.",
+        company: "Udacoding",
+        position: "Lead Mobile Developer",
+        duration: "2019 - 2021",
+        description: "Specialized in Flutter and Android/iOS development, with a focus on creating high-quality, user-friendly mobile applications.",
         achievements: [
           "Increased user engagement by 35% through UX improvements",
-          "Implemented responsive design patterns across all products",
-          "Established frontend development best practices and standards"
+          "Established frontend development best practices and standards",
+          "Collaborated with cross-functional teams to deliver high-quality products",
+          "Utilized Flutter's latest features and best practices to create responsive and visually appealing mobile applications"
         ]
       }
     ],
     education: [
       {
-        degree: "Master of Science in Computer Science",
-        school: "Stanford University",
-        year: "2018",
+        degree: "Bachelor of Science in Computer Science",
+        school: "Asia Cyber University",
+        year: "2026",
         description: "Specialized in Software Engineering and Human-Computer Interaction"
       },
       {
-        degree: "Bachelor of Science in Computer Engineering",
-        school: "UC Berkeley",
-        year: "2016",
-        description: "Magna Cum Laude, Dean's List"
+        degree: "Bachelor of Business in Digital Transformation",
+        school: "Nexford University",
+        year: "2024",
+        description: "Specialized in Business Analysis, Digital Strategy, and Data-Driven Decision Making"
       }
     ],
     certifications: [
@@ -151,10 +154,9 @@ function App() {
   };
 
   const downloadCV = () => {
-    // In a real app, this would download an actual PDF
     const link = document.createElement('a');
-    link.href = '/cv-placeholder.pdf';
-    link.download = `${personalData.name.replace(' ', '_')}_Resume.pdf`;
+    link.href = '/Alamsyah_Resume.pdf';
+    link.download = 'Alamsyah_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -205,12 +207,6 @@ function App() {
                 className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-              <button
-                onClick={() => setIsAdminMode(!isAdminMode)}
-                className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                <Settings size={20} />
               </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}

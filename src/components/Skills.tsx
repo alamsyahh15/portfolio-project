@@ -1,5 +1,4 @@
-import React from 'react';
-import { Code, Database, Cloud, Smartphone, Globe, Zap } from 'lucide-react';
+import { Cloud, Code, Database, Globe, Smartphone, Zap } from 'lucide-react';
 import { PersonalData } from '../types';
 
 interface SkillsProps {
@@ -14,7 +13,7 @@ export default function Skills({ personalData }: SkillsProps) {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20',
       skills: personalData.skills.filter(skill => 
-        ['JavaScript/TypeScript', 'React/Next.js', 'Vue.js'].some(tech => skill.name.includes(tech.split('/')[0]))
+        ['JavaScript/TypeScript', 'React/Next.js', 'Vue.js', 'Laravel', 'Flutter', 'Kotlin'].some(tech => skill.name.includes(tech.split('/')[0]))
       )
     },
     {
@@ -23,7 +22,7 @@ export default function Skills({ personalData }: SkillsProps) {
       color: 'text-purple-600',
       bgColor: 'bg-purple-50 dark:bg-purple-900/20',
       skills: personalData.skills.filter(skill => 
-        ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL'].some(tech => skill.name.includes(tech.split('/')[0]))
+        ['Node.js', 'Golang', 'PostgreSQL', 'MongoDB', 'GraphQL'].some(tech => skill.name.includes(tech.split('/')[0]))
       )
     },
     {

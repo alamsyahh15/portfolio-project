@@ -1,5 +1,4 @@
-import React from 'react';
-import { Download, MapPin, Mail, Phone, Github, Linkedin, ExternalLink, ChevronDown } from 'lucide-react';
+import { ChevronDown, Download, ExternalLink, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { PersonalData } from '../types';
 
 interface HeroProps {
@@ -118,7 +117,7 @@ export default function Hero({ personalData, onDownloadCV }: HeroProps) {
               <div className="w-80 h-80 sm:w-96 sm:h-96 rounded-2xl bg-gradient-to-br from-blue-400 via-purple-500 to-blue-600 p-1 shadow-2xl">
                 <div className="w-full h-full rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="/assets/ic_profile.png"
                     alt={personalData.name}
                     className="w-full h-full object-cover rounded-2xl"
                   />
@@ -128,7 +127,7 @@ export default function Hero({ personalData, onDownloadCV }: HeroProps) {
               {/* Floating Stats */}
               <div className="absolute -top-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">8+</div>
+                  <div className="text-2xl font-bold text-blue-600">5+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Years Exp</div>
                 </div>
               </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, BookOpen, Target, Users } from 'lucide-react';
 import { PersonalData } from '../types';
 
@@ -8,7 +7,7 @@ interface AboutProps {
 
 export default function About({ personalData }: AboutProps) {
   const stats = [
-    { icon: Target, label: 'Years Experience', value: '8+', color: 'text-blue-600' },
+    { icon: Target, label: 'Years Experience', value: '5+', color: 'text-blue-600' },
     { icon: Users, label: 'Projects Completed', value: '50+', color: 'text-purple-600' },
     { icon: Award, label: 'Certifications', value: personalData.certifications.length.toString(), color: 'text-green-600' },
     { icon: BookOpen, label: 'Technologies', value: personalData.skills.length.toString(), color: 'text-orange-600' }

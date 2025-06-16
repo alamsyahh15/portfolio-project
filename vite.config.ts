@@ -12,4 +12,5 @@ export default defineConfig({
     port: 3000,
     allowedHosts: ['alamsyah15.my.id', 'www.alamsyah15.my.id']
   },
+  publicDir: 'assets'
 });
