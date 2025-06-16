@@ -10,6 +10,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3000,
-    allowedHosts: ['alamsyah15.my.id']
+    allowedHosts: ['alamsyah15.my.id', 'www.alamsyah15.my.id']
   },
 });
